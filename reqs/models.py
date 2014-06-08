@@ -5,5 +5,5 @@ class Request(models.Model):
     src = models.ForeignKey(User, related_name='sent')
     dest = models.ForeignKey(User, related_name='received')
     parent = models.ForeignKey('self', related_name='children',
-                               related_query_name='child')
+                               related_query_name='child', null=True)
     body = models.TextField()

@@ -1,4 +1,4 @@
 verse
 =====
 
-Delegation/sharing system
+Delegation to facilitate sharing and avoid the bystander effect. So so very preliminary at the moment.

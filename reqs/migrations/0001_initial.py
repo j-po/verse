@@ -13,7 +13,7 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('src', self.gf('django.db.models.fields.related.ForeignKey')(related_name='sent', to=orm['auth.User'])),
             ('dest', self.gf('django.db.models.fields.related.ForeignKey')(related_name='received', to=orm['auth.User'])),
-            ('parent', self.gf('django.db.models.fields.related.ForeignKey')(related_name='children', to=orm['reqs.Request'])),
+            ('parent', self.gf('django.db.models.fields.related.ForeignKey')(related_name='children', null=True, to=orm['reqs.Request'])),
             ('body', self.gf('django.db.models.fields.TextField')()),
         ))
         db.send_create_signal(u'reqs', ['Request'])
@@ -66,7 +66,7 @@ class Migration(SchemaMigration):
             'body': ('django.db.models.fields.TextField', [], {}),
             'dest': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'received'", 'to': u"orm['auth.User']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'parent': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'children'", 'to': u"orm['reqs.Request']"}),
+            'parent': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'children'", 'null': 'True', 'to': u"orm['reqs.Request']"}),
             'src': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'sent'", 'to': u"orm['auth.User']"})
         }
     }
