@@ -1,0 +1,4 @@
+verse
+=====
+
+Delegation/sharing system
