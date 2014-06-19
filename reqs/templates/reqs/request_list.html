@@ -1,0 +1,13 @@
+{% extends "reqs/base.html" %}
+
+{% block title %}Requests - Verse{% endblock %}
+
+{% block content %}
+<h2>Requests</h2>
+{% for r in object_list %}
+    <div>
+        <h4><a href="{% url 'request-detail' pk=r.id %}"</a> From {{ r.src }} to {{ r.dest }}</a></h4>
+        {{ r.body }}
+{% endfor %}
+    </div>
+{% endblock %}

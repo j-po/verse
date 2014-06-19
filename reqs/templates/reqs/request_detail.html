@@ -1,0 +1,12 @@
+{% extends "reqs/base.html" %}
+
+{% block title %}Request: {{ object }} - Verse{% endblock %}
+
+{% block content %}
+<h4>From {{ object.src }} to {{ object.dest }}</h4>
+{{ object.body }}
+{% comment 'add link to create child request if user is dest' %}
+{% if request.user == object.dest %}
+<a href="{% url 'request-create' parent=object.id %}">Delegate!</a>
+{% endcomment %}
+{% endblock %}
