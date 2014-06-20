@@ -25,6 +25,6 @@ class RequestCreate(CreateView):
         #FIXME: This is very likely the wrong way to do this.
         #It may not even work
         initial = super(RequestCreate, self).get_initial(*args, **kwargs)
-        initial['src'] = request.user
-        initial['parent'] = request.GET.get('parent', default=None)
+        initial['src'] = self.request.user.id
+        initial['parent'] = self.request.GET.get('parent', default=None)
         return initial
