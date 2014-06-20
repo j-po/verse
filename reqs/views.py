@@ -1,20 +1,16 @@
 from django.views.generic import ListView, DetailView, CreateView
-from reqs.models import Request
+from reqs.models import VerseRequest
 from django.contrib.auth.decorators import login_required
 
-@login_required
-def new_request():
-    pass
-
 class RequestList(ListView):
-    model = Request
+    model = VerseRequest
 
 class RequestDetail(DetailView):
-    model = Request
+    model = VerseRequest
 
 class RequestCreate(CreateView):
     #TODO: Add src from logged-in user and parent from referring link
-    model = Request
+    model = VerseRequest
     fields = ['dest', 'title', 'body']
 
     @login_required

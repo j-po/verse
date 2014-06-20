@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from reqs.models import Request
+from reqs.models import VerseRequest
 
-admin.site.register(Request)
+admin.site.register(VerseRequest)
