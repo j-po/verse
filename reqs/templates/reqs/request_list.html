@@ -7,7 +7,7 @@
 (<a href="{% url 'request-create' %}">New request</a>)
 {% for r in object_list %}
     <div>
-        <h4><a href="{% url 'request-detail' pk=r.id %}"</a> From {{ r.src }} to {{ r.dest }}</a></h4>
+        <h4><a href="{% url 'request-detail' pk=r.id %}"> From {{ r.src }} to {{ r.dest }}</a></h4>
         {{ r.body }}
 {% endfor %}
     </div>
