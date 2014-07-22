@@ -3,7 +3,7 @@ verse
 
 Django prototype of Verse, a publicly viewable system for distributing and delegating requests across social networks. Very preliminary.
 
-Users can make requests of each other, as well as forward those requests or split them into subrequests to send to other participants. The chain of requests can be viewed by each participant, allowing for distant participants to directly contact each other. See [here](https://sites.google.com/site/requestverse/home/text) for more specific use cases.
+Users can make requests of each other, as well as forward those requests or split them into subrequests to send to other participants. Everyone can view the full request graph, allowing distant participants to directly contact each other. See [here](https://sites.google.com/site/requestverse/home/text) for a more specific specification, including use cases.
 
 Collaborators welcome!
 
